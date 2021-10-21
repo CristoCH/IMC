@@ -56,6 +56,7 @@ public class IMC extends Application {
         alturaSimpleDoubleProperty = new SimpleDoubleProperty();
         Bindings.bindBidirectional(alturaTextField.textProperty(), alturaSimpleDoubleProperty, new NumberStringConverter());
 
+
         DoubleBinding calculoDoubleBindings = alturaSimpleDoubleProperty.divide(100);
         calculoDoubleBindings= pesoSimpleDoubleProperty.divide(calculoDoubleBindings.multiply(calculoDoubleBindings));
 
