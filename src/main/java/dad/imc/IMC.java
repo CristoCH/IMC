@@ -27,13 +27,19 @@ public class IMC extends Application {
     public void start(Stage primaryStage) throws Exception {
 
         pesoTextField = new TextField();
-        alturaTextField = new TextField();
+        pesoTextField.setMaxWidth(70);
 
-        pesoHbox = new HBox(pesoLabel = new Label("Peso "), pesoTextField = new TextField(), pesoLabel = new Label("kg"));
+        alturaTextField = new TextField();
+        alturaTextField.setMaxWidth(70);
+
+        pesoLabel = new Label("Peso: ");
+        alturaLabel = new Label("Altura: ");
+
+        pesoHbox = new HBox(5,pesoLabel, pesoTextField, new Label("kg"));
         pesoHbox.setAlignment(Pos.CENTER);
 
 
-        alturaHbox = new HBox(alturaLabel = new Label("Altura "), alturaTextField = new TextField(), alturaLabel = new Label("cm"));
+        alturaHbox = new HBox(5,alturaLabel, alturaTextField, new Label("cm"));
         alturaHbox.setAlignment(Pos.CENTER);
 
         Label clasificaionLabel = new Label();
